@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sharedViews="clr-namespace:RecyCashApp.SharedViews;assembly=RecyCashApp"
+             x:Class="RecyCashApp.Views.Search.SearchView"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FFFBD6">
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <sharedViews:HeaderBarView BackgroundColor="White" />
+        <ScrollView Grid.Row="1">
+            <StackLayout BindableLayout.ItemsSource="{Binding ItemSource}"
+                         HorizontalOptions="FillAndExpand" Spacing="0">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame HasShadow="False" Padding="0" CornerRadius="5" HeightRequest="120" HorizontalOptions="FillAndExpand" Margin="16,16,16,0" BackgroundColor="#006616">
+                            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="72" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid>
+                                    <Ellipse Fill="#2D598A" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="Start" Margin="16,16,0,0"></Ellipse>
+                                    <StackLayout WidthRequest="40" HeightRequest="40" Margin="16,16,0,0" Spacing="0" VerticalOptions="Start" HorizontalOptions="Start">
+                                        <Label Text="{Binding Iniciais}" TextColor="White" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ></Label>
+                                    </StackLayout>
+                                    
+                                </Grid>
+                                <StackLayout Grid.Column="1">
+                                    <Label FontFamily="Mohave" FontSize="18" FontAttributes="Bold"
+                                           TextColor="White" HorizontalTextAlignment="Start" Margin="0,16,0,0">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding Nome}" />
+                                                <Span Text="  🌟"></Span>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label  FontFamily="Mohave" FontSize="14"
+                                           TextColor="White" HorizontalTextAlignment="Start" Margin="0,8,0,0">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Avaliações: " />
+                                                <Span Text="{Binding Avaliacao}" FontAttributes="Bold" />
+                                                <Span Text="  ❤️" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label Text="{Binding Nome}" FontFamily="Mohave" FontSize="14"
+                                           TextColor="White" HorizontalTextAlignment="Start" Margin="0,8,0,0">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Distância: " />
+                                                <Span Text="{Binding Distancia}" FontAttributes="Bold" />
+                                                <Span Text=" Km" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+        
+    </Grid>
+</ContentPage>

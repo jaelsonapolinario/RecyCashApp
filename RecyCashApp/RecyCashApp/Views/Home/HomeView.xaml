@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sharedViews="clr-namespace:RecyCashApp.SharedViews;assembly=RecyCashApp"
+             xmlns:ffimage="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="RecyCashApp.Views.Home.HomeView"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+
+        <sharedViews:HeaderBarView />
+        <ScrollView Grid.Row="1">
+            <Grid RowSpacing="0" HeightRequest="693">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="224" />
+                    <RowDefinition Height="468" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" BackgroundColor="#ADF1C4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="248" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Spacing="0">
+                        <ffimage:SvgCachedImage Source="recycling.svg" HeightRequest="200" WidthRequest="248"
+                                                VerticalOptions="EndAndExpand" HorizontalOptions="Start" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Spacing="0">
+                        <Label Text="Pedido de Coleta" FontFamily="Mohave" FontSize="13" FontAttributes="Bold"
+                               TextColor="Black" HorizontalTextAlignment="Center" Margin="0,50,0,0" />
+                        <Label Text="Tem material pronto" FontFamily="Mohave" FontSize="12" TextColor="Black"
+                               HorizontalTextAlignment="Center" Margin="0,4,0,0" />
+                        <Label Text="para descarte?" FontFamily="Mohave" FontSize="12" TextColor="Black"
+                               HorizontalTextAlignment="Center" />
+                        <Label Text="Faça um agendamento" FontFamily="Mohave" FontSize="12" TextColor="Black"
+                               HorizontalTextAlignment="Center" Margin="0,20,0,0" />
+                        <Label Text="de coleta!" FontFamily="Mohave" FontSize="12" TextColor="Black"
+                               HorizontalTextAlignment="Center" />
+
+                        <!-- <Button Text="Nova Coleta" FontFamily="Mohave" FontSize="13" TextColor="White" Padding="0" -->
+                        <!--         BackgroundColor="#093269" HeightRequest="24" WidthRequest="96" CornerRadius="5" -->
+                        <!--         Margin="0,23,0,0" HorizontalOptions="CenterAndExpand" /> -->
+                    </StackLayout>
+                </Grid>
+                <StackLayout Grid.Row="1" BackgroundColor="#FFFBD6" Spacing="0" Padding="24,39,0,0">
+            <StackLayout Orientation="Horizontal" HeightRequest="24">
+                <ffimage:SvgCachedImage Source="hashtag.svg" HeightRequest="24" WidthRequest="24"
+                                        HorizontalOptions="Start" />
+                <Label Text="Coletas Solicitadas" FontFamily="Mohave" FontSize="16" TextColor="Black"
+                       VerticalOptions="CenterAndExpand" Margin="5,0,0,0" />
+            </StackLayout>
+            <Label Text="Você não possui nenhum pedido pendente de coleta =(" FontFamily="Mohave" FontSize="12" TextColor="Black"
+                   VerticalOptions="Start" Margin="0,12,0,0" />
+            
+            <StackLayout Orientation="Horizontal" HeightRequest="24" Margin="0,18,0,0">
+                <ffimage:SvgCachedImage Source="hashtag.svg" HeightRequest="24" WidthRequest="24"
+                                        HorizontalOptions="Start" />
+                <Label Text="Coletas Agendadas" FontFamily="Mohave" FontSize="16" TextColor="Black"
+                       VerticalOptions="CenterAndExpand" Margin="5,0,0,0" />
+            </StackLayout>
+            <Label Text="Não há coletas agendadas até o momento =(" FontFamily="Mohave" FontSize="12" TextColor="Black"
+                   VerticalOptions="Start" Margin="0,12,0,0" />
+            
+            <StackLayout Orientation="Horizontal" HeightRequest="24" Margin="0,18,0,0">
+                <ffimage:SvgCachedImage Source="hashtag.svg" HeightRequest="24" WidthRequest="24"
+                                        HorizontalOptions="Start" />
+                <Label Text="Histórico de Coletas" FontFamily="Mohave" FontSize="16" TextColor="Black"
+                       VerticalOptions="CenterAndExpand" Margin="5,0,0,0" />
+            </StackLayout>
+            <Label Text="Não há histórico de coletas até o momento =(" FontFamily="Mohave" FontSize="12" TextColor="Black"
+                   VerticalOptions="Start" Margin="0,12,0,0" />
+            
+            <ffimage:SvgCachedImage Source="suistanable_recycling.svg" HeightRequest="225" WidthRequest="300"
+                                    HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+            </Grid>
+        </ScrollView>
+        
+        
+    </Grid>
+</ContentPage>

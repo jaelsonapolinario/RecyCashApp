@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{8AE0CF06-25B3-44DC-BB52-0ECEC5FB870D}</ProjectGuid>
+        <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <OutputType>Library</OutputType>
+        <RootNamespace>RecyCashApp.Android</RootNamespace>
+        <AssemblyName>RecyCashApp.Android</AssemblyName>
+        <AndroidApplication>True</AndroidApplication>
+        <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+        <AndroidResgenClass>Resource</AndroidResgenClass>
+        <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+        <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+        <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+        <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+        <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
+        <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AndroidLinkMode>None</AndroidLinkMode>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AndroidManagedSymbols>true</AndroidManagedSymbols>
+        <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Mono.Android" />
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
+        <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
+        <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="MainActivity.cs" />
+        <Compile Include="Resources\Resource.Designer.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\AboutResources.txt" />
+        <None Include="Assets\AboutAssets.txt" />
+        <None Include="Properties\AndroidManifest.xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable-hdpi\ic_home.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\ic_map.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\ic_profile.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\ic_search.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\ic_home.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\ic_map.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\ic_profile.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\ic_search.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\ic_home.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\ic_map.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\ic_profile.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\ic_search.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\ic_home.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\ic_map.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\ic_profile.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\ic_search.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\ic_home.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\ic_map.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\ic_profile.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\ic_search.png" />
+        <AndroidResource Include="Resources\drawable\bell.svg" />
+        <AndroidResource Include="Resources\drawable\facebook-fill.svg" />
+        <AndroidResource Include="Resources\drawable\hashtag.svg" />
+        <AndroidResource Include="Resources\drawable\logo_bar.svg" />
+        <AndroidResource Include="Resources\drawable\recycling.svg">
+          <SubType>Designer</SubType>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\suistanable_recycling.svg">
+          <SubType>Designer</SubType>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\whatsapp.svg" />
+        <AndroidResource Include="Resources\layout\Tabbar.axml" />
+        <AndroidResource Include="Resources\layout\Toolbar.axml" />
+        <AndroidResource Include="Resources\values\styles.xml" />
+        <AndroidResource Include="Resources\values\colors.xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\RecyCashApp\RecyCashApp.csproj">
+            <Project>{2ECE5590-1FFA-4380-84E1-A6A503E565EA}</Project>
+            <Name>RecyCashApp</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      xmlns:ffimage="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+      x:Class="RecyCashApp.SharedViews.HeaderBarView">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="100" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="32" />
+    </Grid.ColumnDefinitions>
+    <StackLayout>
+        <ffimage:SvgCachedImage Source="logo_bar.svg" HeightRequest="50" WidthRequest="100"
+                                VerticalOptions="CenterAndExpand" HorizontalOptions="Start"
+                                Margin="8,0,0,0" />
+    </StackLayout>
+    <StackLayout Grid.Column="2">
+        <ffimage:SvgCachedImage Source="bell.svg" HeightRequest="24" WidthRequest="24"
+                                VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"
+                                Margin="0,0,8,0" />
+    </StackLayout>
+</Grid>

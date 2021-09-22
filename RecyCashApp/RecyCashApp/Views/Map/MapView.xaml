@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sharedViews="clr-namespace:RecyCashApp.SharedViews;assembly=RecyCashApp"
+             x:Class="RecyCashApp.Views.Map.MapView"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <sharedViews:HeaderBarView />
+    </Grid>
+</ContentPage>

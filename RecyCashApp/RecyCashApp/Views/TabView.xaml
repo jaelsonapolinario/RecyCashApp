@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="RecyCashApp.Views.TabView"
+            BarBackgroundColor="White"
+            BackgroundColor="White"
+            BarTextColor="#565656"
+            SelectedTabColor="#40FF40"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:home="clr-namespace:RecyCashApp.Views.Home;assembly=RecyCashApp"
+            xmlns:search="clr-namespace:RecyCashApp.Views.Search;assembly=RecyCashApp"
+            xmlns:map="clr-namespace:RecyCashApp.Views.Map;assembly=RecyCashApp"
+            xmlns:profile="clr-namespace:RecyCashApp.Views.Profile;assembly=RecyCashApp"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+    <NavigationPage  Title="Início" IconImageSource="ic_home.png">
+        <x:Arguments>
+            <home:HomeView />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Pesquisa" IconImageSource="ic_search.png">
+        <x:Arguments>
+            <search:SearchView />
+        </x:Arguments>
+    </NavigationPage>
+    <!-- <NavigationPage Title="Mapa" IconImageSource="ic_map.png"> -->
+    <!--     <x:Arguments> -->
+    <!--         <map:MapView /> -->
+    <!--     </x:Arguments> -->
+    <!-- </NavigationPage> -->
+    <NavigationPage Title="Perfil" IconImageSource="ic_profile.png">
+        <x:Arguments>
+            <profile:ProfileView />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>
