@@ -84,7 +84,7 @@
         <AndroidResource Include="Resources\drawable-xxxhdpi\ic_profile.png" />
         <AndroidResource Include="Resources\drawable-xxxhdpi\ic_search.png" />
         <AndroidResource Include="Resources\drawable\bell.svg" />
-        <AndroidResource Include="Resources\drawable\facebook-fill.svg" />
+        <AndroidResource Include="Resources\drawable\facebook_fill.svg" />
         <AndroidResource Include="Resources\drawable\hashtag.svg" />
         <AndroidResource Include="Resources\drawable\logo_bar.svg" />
         <AndroidResource Include="Resources\drawable\recycling.svg">

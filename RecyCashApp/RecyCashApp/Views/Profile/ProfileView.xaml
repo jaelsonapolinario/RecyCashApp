@@ -6,15 +6,21 @@
              xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              x:Class="RecyCashApp.Views.Profile.ProfileView"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#FFFBD6">
+             BackgroundColor="White">
     <Grid RowSpacing="0">
+        <Grid.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="Android" Value="0,0,0,0" />
+                <On Platform="iOS" Value="0,20,0,0" />
+            </OnPlatform>
+        </Grid.Padding>
         <Grid.RowDefinitions>
             <RowDefinition Height="64" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <sharedViews:HeaderBarView BackgroundColor="White" />
-        <StackLayout Grid.Row="1">
+        <StackLayout Grid.Row="1" BackgroundColor="#FFFBD6">
             <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="0,37,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="130" />
@@ -71,7 +77,7 @@
                 </StackLayout>
                 <StackLayout HeightRequest="86" WidthRequest="64" VerticalOptions="EndAndExpand"
                              HorizontalOptions="StartAndExpand" Margin="20,5,0,0">
-                    <forms:SvgCachedImage Source="facebook-fill.svg" HeightRequest="60" WidthRequest="60"
+                    <forms:SvgCachedImage Source="facebook_fill.svg" HeightRequest="60" WidthRequest="60"
                                           HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" />
                     <Label Text="Facebook" FontFamily="Mohave" FontSize="12"
                            TextColor="Black" HorizontalOptions="Start" Margin="0,0,0,0" />

@@ -120,7 +120,7 @@
     </ItemGroup>
     <ItemGroup>
       <BundleResource Include="Resources\bell.svg" />
-      <BundleResource Include="Resources\facebook-fill.svg" />
+      <BundleResource Include="Resources\facebook_fill.svg" />
       <BundleResource Include="Resources\hashtag.svg" />
       <BundleResource Include="Resources\ic_home.png" />
       <BundleResource Include="Resources\ic_home@2x.png" />

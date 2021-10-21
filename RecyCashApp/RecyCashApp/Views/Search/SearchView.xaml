@@ -5,15 +5,21 @@
              xmlns:sharedViews="clr-namespace:RecyCashApp.SharedViews;assembly=RecyCashApp"
              x:Class="RecyCashApp.Views.Search.SearchView"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#FFFBD6">
+             BackgroundColor="White">
     <Grid RowSpacing="0">
+        <Grid.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="Android" Value="0,0,0,0" />
+                <On Platform="iOS" Value="0,20,0,0" />
+            </OnPlatform>
+        </Grid.Padding>
         <Grid.RowDefinitions>
             <RowDefinition Height="64" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <sharedViews:HeaderBarView BackgroundColor="White" />
-        <ScrollView Grid.Row="1">
+        <ScrollView Grid.Row="1" BackgroundColor="#FFFBD6">
             <StackLayout BindableLayout.ItemsSource="{Binding ItemSource}"
                          HorizontalOptions="FillAndExpand" Spacing="0">
                 <BindableLayout.ItemTemplate>
